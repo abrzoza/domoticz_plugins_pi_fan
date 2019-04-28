@@ -105,7 +105,7 @@ class BasePlugin:
         Domoticz.Log("onMessage called")
 
     def onCommand(self, Unit, Command, Level, Hue):
-        Domoticz.Log("onCommand called for Unit " + str(Unit) + ": Parameter '" + str(Command) + "', Level: " + str(Level))
+        Domoticz.Debug("onCommand called for Unit " + str(Unit) + ": Parameter '" + str(Command) + "', Level: " + str(Level))
         
         if Unit == self.__UNIT_FAN:
             Command = Command.strip()
@@ -233,18 +233,18 @@ def checkTEMP(maxTemp, Pin, Unit, UnitTemp):
     fnumber = getCPUtemperature()
     #UpdateDevice(int(UnitTemp), -1, str(fnumber), AlwaysUpdate=True)
     Devices[UnitTemp].Update(nValue = int(fnumber), sValue = str(fnumber), Image=7)
-    Domoticz.Log("CPU temp ..........: -1 {} °C".format(fnumber))
+    Domoticz.Debug("CPU temp ..........: {} °C".format(fnumber))
             
     if fnumber > maxTemp:
         wiringpi.digitalWrite(int(Pin), 1)
         getFanStatus(Unit, Pin)
-        Domoticz.Log("The fan was turned on when the temperature CPU was exceeded")
+        Domoticz.Debug("The fan was turned on when the temperature CPU was exceeded")
         
         return True
     else:
         wiringpi.digitalWrite(Pin, 0)
         getFanStatus(Unit, Pin)
-        Domoticz.Log("Lowering the temperature turned off the fan")    
+        Domoticz.Debug("Lowering the temperature turned off the fan")    
         
         return False
         
