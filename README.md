@@ -15,6 +15,10 @@ The fan is controlled by setting the high state to Pin indicated in the plugin c
 
 `sudo pip install wiringpi`
 
+or
+
+`sudo pip3 install wiringpi'
+
 ## Repairing wiringPi installation
 
 `$ gpio -v`
