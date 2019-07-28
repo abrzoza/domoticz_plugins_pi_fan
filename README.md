@@ -12,11 +12,15 @@ The fan is controlled by setting the high state to Pin indicated in the plugin c
 
 
 ## Installation wiringpi
-Repairing wiringPi installation
+
+`sudo pip install wiringpi`
+
+## Repairing wiringPi installation
 
 `$ gpio -v`
 
 If you install the package, you can uninstall it by:
+
 `$ sudo apt-get purge wiringpi`
 
 `$ hash -r`
