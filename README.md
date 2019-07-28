@@ -17,15 +17,13 @@ Repairing wiringPi installation
 `$ gpio -v`
 
 If you install the package, you can uninstall it by:
-`$ sudo apt-get purge wiringpi
-
-$ hash -r`
+`$ sudo apt-get purge wiringpi`
+`$ hash -r`
 
 System update:
 
-`$ sudo apt-get update
-
-$ sudo apt-get upgrade`
+`$ sudo apt-get update`
+`$ sudo apt-get upgrade`
 
 If you do not have Git installed, you can install it from:
 
@@ -33,19 +31,15 @@ If you do not have Git installed, you can install it from:
 
 WiringPi installation using the GIT tool:
 
-`$ cd
-
-$ git clone git://git.drogon.net/wiringPi
-
-$ cd ~/wiringPi
-
-$ git pull origin`
+`$ cd`
+`$ git clone git://git.drogon.net/wiringPi`
+`$ cd ~/wiringPi`
+`$ git pull origin`
 
 Compilation and installation:
 
-`$ cd ~/wiringPi
-
-$ sudo ./build`
+`$ cd ~/wiringPi`
+`$ sudo ./build`
 
 # Implementation
 
